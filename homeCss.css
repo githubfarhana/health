@@ -1,0 +1,359 @@
+html { 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 100vh;
+    max-height: 1200px;
+    background-color: #ffffff;
+margin: 0 auto;
+}
+body {
+    margin: auto;
+    background-color: #ffffff;
+    border: 1px solid rgb(99, 213, 248);
+}
+.main-text{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: small;
+font-style: italic;
+color: #4e085f;}
+.container { 
+    width: 100%;
+    
+    min-height: 50vh;
+    background: linear-gradient(135deg,#153677,#4e085f);
+padding: 10px;
+display: flex;
+}
+.calander{
+    width: 30%;
+    max-width: 300px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius:10px;
+    display: flex;
+
+}
+.red img{
+    width: 100px;
+    height: 100px;
+    padding: 8px;
+    border-radius: 50%; 
+    
+}
+.yellow img{
+    width: 100px;
+    height: 100px;
+    padding: 8px;
+    border-radius: 50%; 
+    
+}
+.todolist {
+    width: 30%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius:10px;
+    flex-direction: row;
+    
+}
+.todolist h2{
+    color:#002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #4e085f;
+}
+.todolist h5{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: small;
+font-style: italic;
+color: #4e085f;
+
+}
+.todolist h2 img{
+    width: 30px;
+    margin-left: 10px;
+
+}
+.row {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ background:#edeef0;
+ border-radius: 30px;
+ padding-left: 20px;
+ margin-bottom: 25px;
+}
+input {
+flex:1;
+border: none;
+outline: none;
+background:transparent;
+padding: 10px;
+font-weight: 14px;
+}
+button{
+    border: none;
+    outline: none;
+    background:#ff5945;
+padding: 16px 50px;
+color: #fff;
+font-size: 16px;
+cursor: pointer;
+border-radius: 40px;
+}
+ul li{
+ list-style: none;
+ font-size: 17px;
+ padding:12px 8px 12px 50px;
+ user-select: none; 
+ cursor: pointer;
+ position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+
+}
+ul li.checked{
+    color: #e5e8ee;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(images/checked.png);  
+}
+ul li span{
+  position: absolute;
+  right:0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+border-radius: 50%;
+}
+ul li span:hover{
+    background: #edeef0;
+}
+
+nav{
+    background-color: rgb(87, 214, 249);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+nav .logo img {
+    width: 56px;
+    height: 56px;
+    padding: 8px;
+    border-radius: 50%; 
+}
+nav .logo .title
+{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+}
+nav ul li {
+    color: aliceblue;
+    padding: 22px 40px;
+    background-color: #333333;
+}
+nav ul li:hover{
+    background-color: aqua;
+}
+nav ul li.active { background-color: #222222;
+
+}
+nav ul li a{ color: white;
+text-decoration: none;}
+@media all and  (max-width: 800px){
+    nav { justify-content: flex-start;}
+    nav ul { justify-content: space-between;}
+}
+@media all and (max-width: 600px)
+{ nav { flex-direction: column; 
+        align-items: center;}
+   
+nav ul 
+   { width: 100%;
+    flex-direction: column;
+    align-items: stretch;}
+nav ul li
+{
+    text-align: center;
+}
+}
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 100%;
+    background-image: url(//unsplash.it/900/500/?blur);
+    background-color: #333333;
+    background-size: cover;
+    text-align: center;
+}
+@keyframes appear {
+from {
+    opacity: 0.0;
+    top: -100px;
+}
+to {
+    opacity: 1;
+    top: 0.0; 
+}
+}
+.banner .heading {
+    flex: 1;
+    justify-self: center;
+    color: aliceblue;
+    font-size: 3em;
+    font-weight: bold;
+    position: relative;
+    animation: appear 1s ease-in-out 1s forwards;
+}
+
+.banner .heading small {
+    font-size: small;
+}
+.main-text {
+    font-size: 18px;
+    padding: 20px;
+}
+.subtext{
+    display: flex; 
+}
+.subtext div {
+    
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    color: aliceblue;
+    font-family: cursive;
+}
+/* .subtext:hover{
+    transform: scale(0.80);
+    opacity: 0.5; */
+
+.subtext .red {
+    background-color: rgb(240, 136, 136);
+}
+.red:hover{
+    transform: scale(0.80);
+    opacity: 0.5;}
+.subtext .yellow {
+    background-color: rgb(229, 188, 6);
+}
+.yellow:hover{
+    transform: scale(0.80);
+    opacity: 0.5;}
+
+.title{
+    font-size: 24px;
+    padding: 12px;
+    margin: 6px;
+    border-top: 5px solid grey;
+    border-bottom: 5px solid grey;
+
+}
+.projects{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.project{
+    flex-basis: 325px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid #d3d3d3;
+    border-radius: 10px;
+
+}
+.project h4{
+    font-size: 20px;
+    padding: 12px;
+    margin: 6px;
+    border-top: 5px solid grey;
+    border-bottom: 5px solid grey;
+
+}
+.project p{
+    padding: 0px 12px;
+
+}
+.project img{
+    width: 100%;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+.project img:hover{
+    transform: scale(0.90);
+    opacity: 0.5;
+}
+.project button{
+    background-color: rgb(73, 15, 232);
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 12px;
+}
+.project button:hover{
+    background-color: rgb(205, 238, 155);
+}
+.quote{
+    display: block;
+    background-color: #eeeeee;
+    padding: 50px;
+    text-align: center;
+    font-style: italic;
+}
+.quote::before {
+    display: inline-block;
+    content: open-quote;
+    color: #d3d3d3;;
+    font-size: 32px;
+}
+.quote::after {
+    display: inline-block;
+    content: close-quote;
+    color: #d3d3d3;
+    font-size: 32px;
+}
+.footer {
+    position: static;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333333;
+    text-align: center;
+    padding: 24px;
+}
